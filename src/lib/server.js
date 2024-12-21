@@ -10,10 +10,8 @@ const web_server_url = process.env.PUBLIC_URL || `http://${host}:${port}`;
 
 export default function server() {
   createServer({
-    originBlacklist: ["*"],
-    originWhitelist: process.env.ALLOWED_ORIGINS
-      ? process.env.ALLOWED_ORIGINS.split(",")
-      : [],
+    originBlacklist: [],
+    originWhitelist: ["https://cnc-verse.vercel.app/","https://m3u8proxy-xi.vercel.app/","http://127.0.0.1:8080/"],
     requireHeader: [],
     removeHeaders: [
       "cookie",
